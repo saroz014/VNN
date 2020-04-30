@@ -13,3 +13,7 @@ class OnlineKhabarSpider(scrapy.Spider):
             yield {'title': item[0],
                    'image': item[1],
                    'url': item[2]}
+
+        next_page = response.css('div.paginate-links a.next::attr(href)').get()
+        if next_page is not None:
+            yield response.follow(next_page, callback=self.parse)
