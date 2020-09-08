@@ -4,6 +4,10 @@ Visit Nepal News, a scrapy project to scrape tourism/travel news of Nepal from d
 
 Note: This project only scrapes news links not the news itself.
 
+## Requirements
+
+`pip3 install -r requirements.txt`
+
 ## Usage
 
 ```
